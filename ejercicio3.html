@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Ingreso</title>
+  <link rel="stylesheet" href="ejercicio3.css">
+</head>
+
+<body>
+  <form action="mailto:reservas@hotel.com" method="post" enctype="text/plain" id="formulario">
+
+    <fieldset class="f1" id="f1">
+      <legend>Datos de Usuario</legend>
+      <input type="text" id="nombre" name="Nombre" placeholder="Nombre" autofocus maxlength="15" pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]+"
+        required>
+
+      <input type="text" id="Apellido" name="Apellido" placeholder="Apellidos" maxlength="15" pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]+"
+        required>
+
+      <input type="tel" id="telefono" name="Telefono" placeholder="Teléfono" maxlength="9">
+      <!-- <input type="email" placeholder="correo electrónico"> -->
+
+      <input type="number" id="noches" name="Noches" placeholder="número de noches">
+    </fieldset>
+
+    <fieldset class="f2" id="f2">
+      <legend>Datos de Reserva</legend>
+      <label for="fecha" class="reserva">Fecha de Entrada</label>
+      <input type="date" id="fecha" name="FechaIngreso" required>
+
+      <label for="fecha" class="reserva">Fecha de salida</label>
+      <input type="date" id="fecha" name="FechaSalida" required>
+
+      <p>Seleccione el tipo de habitación</p>
+      <label for="simple" class="tipo">Simple
+        <input type="radio" value="simple" name="Cama" id="simple"></label>
+
+      <label for="doble" class="tipo">Doble
+        <input type="radio" value="doble" name="Cama" id="doble"></label>
+
+      <label for="matrimonial" class="tipo">Matrimonial
+        <input type="radio" value="Matrimonial" name="Cama" id="matrimonial"></label>
+    </fieldset>
+
+    <fieldset class="f3" id="f3">
+      <legend>Servicios extras</legend>
+
+      <div class="contExtras">
+        <label class="extras">Desayuno</label>
+        <input type="checkbox" name="maniana" value="Desayuno" checked>
+      </div>
+
+      <div class="contExtras">
+        <label class="extras">Comida</label>
+        <input type="checkbox" name="tarde" value="Comida">
+      </div>
+
+      <div class="contExtras">
+        <label class="extras">Cena</label>
+        <input type="checkbox" name="noche" value="Cena">
+      </div>
+      <div class="contExtras">
+        <label class="extras">Nevera</label>
+        <input type="checkbox" name="nevera" value="Nevera">
+      </div>
+      <div class="contExtras camCheck">
+        <label class="extras">Cama supletoria</label>
+        <input type="checkbox" name="cama supletoria" value="cama supletoria">
+      </div>
+
+      <div class="tipCam">
+        <label for="tipo" class="camSup">Tipo de cama</label>
+        <select name="tipo" id="tipo">
+          <option value="cama individual">Cama individual</option>
+          <option value="cama doble">Cama doble</option>
+        </select>
+      </div>
+      <textarea name="comentario" id="" placeholder="Deje su comentario"></textarea>
+    </fieldset>
+    <div class="btn">
+      <input type="reset">
+      <input type="submit" id="btnSubmit">
+    </div>
+  </form>
+  <section class="datosDinamicos" id="contDiv"></section>
+ <script src="script.js"></script>
+</body>
+
+</html>
