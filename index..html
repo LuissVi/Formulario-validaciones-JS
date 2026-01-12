@@ -4,34 +4,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario de Ingreso</title>
-  <link rel="stylesheet" href="ejercicio3.css">
+  <title>Formulario de Reserva</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <form action="mailto:reservas@hotel.com" method="post" enctype="text/plain" id="formulario">
+  <form action="" method="post" enctype="text/plain" id="formulario">
 
     <fieldset class="f1" id="f1">
       <legend>Datos de Usuario</legend>
-      <input type="text" id="nombre" name="Nombre" placeholder="Nombre" autofocus maxlength="15" pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]+"
-        required>
+      <div class="contdivf1">
+        <input type="text" id="nombre" name="Nombre" placeholder="Nombre" autofocus maxlength="15"
+          pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]+" required>
+        <span></span>
+      </div>
 
-      <input type="text" id="Apellido" name="Apellido" placeholder="Apellidos" maxlength="15" pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]+"
-        required>
+      <div class="contdivf1">
+        <input type="text" id="apellido" name="Apellido" placeholder="Apellidos" maxlength="15"
+          pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]+" required>
+        <span></span>
+      </div>
 
-      <input type="tel" id="telefono" name="Telefono" placeholder="Teléfono" maxlength="9">
-      <!-- <input type="email" placeholder="correo electrónico"> -->
 
-      <input type="number" id="noches" name="Noches" placeholder="número de noches">
+      <div class="contdivf1">
+        <input type="tel" id="telefono" title="número de teléfono" name="Telefono" placeholder="Teléfono" maxlength="9">
+        <!-- <input type="email" placeholder="correo electrónico"> -->
+        <span></span>
+      </div>
+
+
+      <div class="contdivf1">
+        <input type="number" title="Máximo 90 días" id="noches" name="Noches" placeholder="número de noches" required>
+        <span></span>
+      </div>
+
     </fieldset>
 
     <fieldset class="f2" id="f2">
       <legend>Datos de Reserva</legend>
-      <label for="fecha" class="reserva">Fecha de Entrada</label>
-      <input type="date" id="fecha" name="FechaIngreso" required>
+      <label for="fechaInicio" class="reserva">Fecha de Entrada</label>
+      <input type="date" id="fechaInicio" name="FechaIngreso" required>
 
-      <label for="fecha" class="reserva">Fecha de salida</label>
-      <input type="date" id="fecha" name="FechaSalida" required>
+      <label for="fechaSalida" class="reserva">Fecha de salida</label>
+      <input type="date" id="fechaSalida" name="FechaSalida" required>
 
       <p>Seleccione el tipo de habitación</p>
       <label for="simple" class="tipo">Simple
@@ -80,12 +95,15 @@
       <textarea name="comentario" id="" placeholder="Deje su comentario"></textarea>
     </fieldset>
     <div class="btn">
-      <input type="reset">
-      <input type="submit" id="btnSubmit">
+      <input type="reset" id="btReset">
+      <input type="submit" id="btEnvio">
     </div>
   </form>
-  <section class="datosDinamicos" id="contDiv"></section>
- <script src="script.js"></script>
+  <div id="contSpinner"></div>
+  <section 
+  class="contDatosDinamicos" id="contDiv">
+  </section>
+  <script src="script.js"></script>
 </body>
 
 </html>
