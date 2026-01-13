@@ -4,6 +4,11 @@
 Este proyecto consiste en un **formulario de reserva de hotel** desarrollado con **HTML, CSS y JavaScript**, que guía al usuario paso a paso para completar sus datos y reserva.  
 El formulario habilita dinámicamente secciones según la validación de los datos ingresados y muestra los resultados de forma interactiva.
 
+## 🔗 Enlace al proyecto
+
+👉 [Ver Formulario](https://formulario-validacionesjs.netlify.app)
+
+
 ## Tecnologías utilizadas
 - **HTML5**: estructura del formulario.
 - **CSS3**: estilos y diseño visual.
@@ -37,7 +42,8 @@ El formulario habilita dinámicamente secciones según la validación de los dat
 ## Estado del proyecto
    - El **código HTML y CSS** está completo y funcional.
    - La **lógica JavaScript** está implementada correctamente, pero **solo faltaría optimizar el código JS** para mejorar legibilidad y  eficiencia.
-   - Toda la explicación detallada del código JavaScript se encuentra en el archivo **`archivosPDF/EXPLICACION-JS.pdf`**.
+   - Toda la explicación detallada del código JavaScript se encuentra en el archivo [Explicación JavaScript.pdf](archivosPDF/EXPLICACION-JS.pdf)
+
 
 ## Cómo ejecutar
 1. Clonar o descargar el repositorio.
@@ -46,4 +52,4 @@ El formulario habilita dinámicamente secciones según la validación de los dat
 
 ## Autor:
 **Luis Villar**  
-   Proyecto académico / práctica de JavaScript
+   Proyecto académico-personal / práctica de JavaScript
